@@ -1,7 +1,7 @@
 import json
 import httplib, urllib
 import logging
-from domotica import settings
+import settings
 
 HOST = "rest.nexmo.com"
 SEND_PATH = "/sms/json"
