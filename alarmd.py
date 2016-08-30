@@ -15,7 +15,7 @@ import settings
 
 from pollers import AlarmPoller
 
-POLL_INTERVAL = 5
+POLL_INTERVAL = 60
 
 def poll(s7conn, pollers):
     for poller in pollers:
