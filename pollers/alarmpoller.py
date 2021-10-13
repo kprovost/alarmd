@@ -1,5 +1,5 @@
 import logging
-from poller import Poller
+from pollers.poller import Poller
 from notifier import sms
 import settings
 import s7
