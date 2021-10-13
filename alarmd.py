@@ -14,6 +14,7 @@ import s7
 import settings
 
 from pollers import AlarmPoller
+from pollers import Alarm2Poller
 
 POLL_INTERVAL = 60
 
@@ -49,7 +50,8 @@ def main():
     logging.info("Starting alarmd...")
 
     pollers = [
-            AlarmPoller()
+            AlarmPoller(),
+            Alarm2Poller()
         ]
 
     s7conn = connect()
