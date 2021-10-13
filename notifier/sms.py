@@ -41,7 +41,11 @@ def parse_response(r):
 def query_balance():
     resp = send_request({ }, "GET", BALANCE_PATH)
     d = json.loads(resp)
-    return d['value']
+    try:
+        return d['value']
+    except Exception as e:
+        print("Error retrieving balance: %s" % e)
+        return -1
 
 def send(text, to):
     smsreq = build_request(text, to)
